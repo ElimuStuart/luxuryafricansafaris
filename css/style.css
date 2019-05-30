@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Yatra+One&display=swap');
+/* 
+
+
+    font-family: 'Hind Siliguri', sans-serif;
+
+    font-family: 'Yatra One', cursive;
+
+         #006400 dark green
+         #228B22 	 forest green
+         #8B4513 saddle brown
+         #D2691E chocolate
+         sienna #A0522D 	
+
+
+*/
+
+/* global styles */
+*, 
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    
+}
+
+body {
+    font-family: "Yatra One", cursive !important;
+}
+
+:root {
+    --main-font-color: darkgreen;
+    --main-white: #fff;
+    --main-deep-brown-color: #8B4513;
+    --main-footer-bg-color: #4b4b4b;
+    --main-font-family: "Wisdom Words Personal Use", cursive !important;
+
+}
+
+section {
+    padding: 6rem 0;
+}
+
+p{
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 1.8rem !important;
+    /* color: var(--main-deep-brown-color); */
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+/* reusable classes */
+.btn {
+    display: inline-block;
+    transition: all 650ms;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,.9), transparent), url(../images/slide_2.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+
+}
+
+/* header - nav toggle */
+.menu {
+    padding: 2rem 2.5rem;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menu .bar,
+.menu .bar::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 4rem;
+    background: var(--main-white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition:650ms;
+}
+
+.menu .bar::after {
+    content: "menu";
+    letter-spacing: 2px;
+    margin-right: -2px;
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--main-white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition:650ms;
+}
+
+.menu .bar::before {
+    top: -2rem;
+}
+
+.menu .bar::after {
+    top: 2rem;
+}
+
+.active .bar {
+    background: transparent;
+}
+
+.active .bar::before {
+    
+    transform: rotate(45deg);
+}
+
+.active .bar::after {
+    content: "";
+    height: 2px;
+    width: 4rem;
+    background: var(--main-white);
+    transform: rotate(-45deg);
+}
+
+.active .bar::before,
+.active .bar::after {
+    top: 0;
+}
+
+/* header - main text */
+.main-text {
+    line-height: 0;
+    color: var(--main-white);
+    margin: auto;
+    user-select: none;
+}
+
+.main-text h1 {
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    font-weight: 100;
+    font-size: 8rem;
+    margin-bottom: 5rem;
+}
+
+.main-text h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-right: -5px;
+    font-size: 2rem;
+    line-height: 1;
+    position: relative;
+}
+
+.main-btn {
+    font-size: 1.5rem;
+    border: 2px solid var(--main-font-color);
+    padding: 2rem 2.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.main-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
